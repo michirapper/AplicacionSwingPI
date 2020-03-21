@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.Font;
 
 public class Vista extends JFrame {
 	private Controlador miControlador;
@@ -16,6 +17,8 @@ public class Vista extends JFrame {
 	private JPasswordField txtPwd;
 	private JButton btnLogin;
 	private JLabel lblRespuesta;
+	private JButton btnCancelar;
+	private JLabel lblHeOlvidadoMi;
 	
 	public Vista () {
 		setTitle("Login MVC");
@@ -23,21 +26,23 @@ public class Vista extends JFrame {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
-		JLabel lblUsr = new JLabel("Usuario");
+		JLabel lblUsr = new JLabel("Usuario :");
+		lblUsr.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lblUsr.setBounds(60, 74, 93, 14);
 		getContentPane().add(lblUsr);
 		
 		JLabel lblPwd = new JLabel("Contrase\u00F1a");
+		lblPwd.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lblPwd.setBounds(60, 113, 93, 14);
 		getContentPane().add(lblPwd);
 		
 		txtUsr = new JTextField();
-		txtUsr.setBounds(163, 71, 109, 20);
+		txtUsr.setBounds(176, 74, 138, 20);
 		getContentPane().add(txtUsr);
 		txtUsr.setColumns(10);
 		
 		txtPwd = new JPasswordField();
-		txtPwd.setBounds(163, 111, 109, 20);
+		txtPwd.setBounds(176, 113, 138, 20);
 		getContentPane().add(txtPwd);
 		
 		btnLogin = new JButton("Login");
@@ -46,13 +51,21 @@ public class Vista extends JFrame {
 				miControlador.login();
 			}
 		});
-		btnLogin.setBounds(163, 173, 109, 23);
+		btnLogin.setBounds(257, 173, 78, 23);
 		getContentPane().add(btnLogin);
 		
 		lblRespuesta = new JLabel("");
 		lblRespuesta.setForeground(Color.RED);
 		lblRespuesta.setBounds(60, 148, 212, 14);
 		getContentPane().add(lblRespuesta);
+		
+		btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBounds(50, 172, 78, 23);
+		getContentPane().add(btnCancelar);
+		
+		lblHeOlvidadoMi = new JLabel("He olvidado mi contrase\u00F1a.");
+		lblHeOlvidadoMi.setBounds(145, 144, 169, 14);
+		getContentPane().add(lblHeOlvidadoMi);
 	}
 	
 	public void setControlador(Controlador miControlador) {
