@@ -23,7 +23,7 @@ public class Vista extends JFrame {
 	public Vista () {
 		setTitle("Login MVC");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 421, 285);
 		getContentPane().setLayout(null);
 		
 		JLabel lblUsr = new JLabel("Usuario :");
@@ -51,20 +51,20 @@ public class Vista extends JFrame {
 				miControlador.login();
 			}
 		});
-		btnLogin.setBounds(257, 173, 78, 23);
+		btnLogin.setBounds(239, 161, 78, 23);
 		getContentPane().add(btnLogin);
 		
 		lblRespuesta = new JLabel("");
 		lblRespuesta.setForeground(Color.RED);
-		lblRespuesta.setBounds(60, 148, 212, 14);
+		lblRespuesta.setBounds(85, 137, 212, 14);
 		getContentPane().add(lblRespuesta);
 		
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(50, 172, 78, 23);
+		btnCancelar.setBounds(45, 161, 93, 23);
 		getContentPane().add(btnCancelar);
 		
 		lblHeOlvidadoMi = new JLabel("He olvidado mi contrase\u00F1a.");
-		lblHeOlvidadoMi.setBounds(145, 144, 169, 14);
+		lblHeOlvidadoMi.setBounds(228, 194, 169, 14);
 		getContentPane().add(lblHeOlvidadoMi);
 	}
 	
