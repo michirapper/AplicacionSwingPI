@@ -79,7 +79,7 @@ public class cambioContraseña extends JFrame {
 
 	}
 
-	protected void gologin() {
+	public void gologin() {
 		miControlador.goLoginCambioContrasena();
 		
 	}

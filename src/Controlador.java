@@ -47,5 +47,10 @@ public class Controlador {
 		miCambioContraseña.setVisible(false);	
 		miLogin.setVisible(true);
 	}
+	public void goLoginPantallaPrincipal() {
+		miPantallaPrincipal.setVisible(false);	
+		miLogin.setVisible(true);
+		
+	}
 	
 }
