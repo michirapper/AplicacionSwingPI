@@ -3,13 +3,23 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.table.DefaultTableModel;
 
-public class pantallaPrincipalPlantilla extends JFrame {
+public class Empresas extends JFrame {
 	private Controlador miControlador;
 
 	private JPanel contentPane;
@@ -20,9 +30,11 @@ public class pantallaPrincipalPlantilla extends JFrame {
 	private JButton btnInicio;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
+	private JTable table;
 
-	public pantallaPrincipalPlantilla() {
-		setTitle("Cambio contraseña");
+	public Empresas() {
+
+		setTitle("Empresas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -45,14 +57,41 @@ public class pantallaPrincipalPlantilla extends JFrame {
 		btnNotas = new JButton("NOTAS");
 		btnNotas.setBounds(443, 11, 90, 55);
 		getContentPane().add(btnNotas);
-
+		Icon foto = new ImageIcon(getClass().getResource("/img/fotoPerfil.png"));
 		btnPerfil = new JButton("");
-		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
+		btnPerfil.setIcon(foto);
 		btnPerfil.setBounds(900, 11, 55, 55);
 		getContentPane().add(btnPerfil);
-		
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				gologin();
+			}
+		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(68, 111, 760, 343);
+		contentPane.add(scrollPane);
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null},
+			},
+			new String[] {
+				"Foto", "Nombre", "Valoracion", "Descripcion", "WEB"
+			}
+		));
+		scrollPane.setViewportView(table);
+	}
+
+	public void gologin() {
+		miControlador.goLoginPantallaPrincipal();
+
+	}
+
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }
