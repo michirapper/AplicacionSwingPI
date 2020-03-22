@@ -35,13 +35,17 @@ public class Controlador {
 		miLogin.setVisible(false);
 		miBienvenida.setVisible(true);
 	}
-	public void goLogin() {
+	public void goLoginRegistro() {
 		miRegistro.setVisible(false);	
 		miLogin.setVisible(true);
 	}
 	public void cambiarContrasena() {
 		miLogin.setVisible(false);
 		miCambioContraseña.setVisible(true);		
+	}
+	public void goLoginCambioContrasena() {
+		miCambioContraseña.setVisible(false);	
+		miLogin.setVisible(true);
 	}
 	
 }

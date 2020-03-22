@@ -16,6 +16,7 @@ public class Main {
 		miModelo.setLogin(miLogin);
 		miLogin.setControlador(miControlador);
 		miRegistro.setControlador(miControlador);
+		miCambioContraseña.setControlador(miControlador);
 		miLogin.setModelo(miModelo);		
 		miLogin.setVisible(true);
 		

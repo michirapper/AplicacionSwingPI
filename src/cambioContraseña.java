@@ -6,8 +6,12 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class cambioContraseña extends JFrame {
+	private Controlador miControlador;
+
 	private JPanel contentPane;
 	private JTextField txtUsuario;
 	private JTextField txtNuevaContrasena;
@@ -16,11 +20,8 @@ public class cambioContraseña extends JFrame {
 	private JButton btnCancelar;
 
 	public cambioContraseña() {
-		
-//		setTitle("Cambio Contraseña");
-//		
-//		getContentPane().setLayout(null);
-		setTitle("Registro");
+
+		setTitle("Cambio contraseña");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 478, 328);
 		contentPane = new JPanel();
@@ -59,12 +60,31 @@ public class cambioContraseña extends JFrame {
 		getContentPane().add(txtConfirmarContrasena);
 
 		btnGuardar = new JButton("Guardar");
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				gologin();
+			}
+		});
 		btnGuardar.setBounds(335, 227, 89, 23);
 		getContentPane().add(btnGuardar);
 
 		btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				gologin();
+			}
+		});
 		btnCancelar.setBounds(35, 227, 89, 23);
 		getContentPane().add(btnCancelar);
 
+	}
+
+	protected void gologin() {
+		miControlador.goLoginCambioContrasena();
+		
+	}
+
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }

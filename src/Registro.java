@@ -136,6 +136,6 @@ public class Registro extends JFrame {
 	}
 
 	public void goLogin() {
-		miControlador.goLogin();
+		miControlador.goLoginRegistro();
 	}
 }
