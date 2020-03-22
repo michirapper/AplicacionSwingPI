@@ -32,8 +32,8 @@ public class Controlador {
 		miBienvenida.setVisible(true);
 	}
 	public void goLogin() {
-		miRegistro.setVisible(false);
-		miLogin.setVisible(true);		
+		miRegistro.setVisible(false);	
+		miLogin.setVisible(true);
 	}
 	
 }

@@ -5,9 +5,11 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class cambioContraseña extends JFrame {
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtUsuario;
+	private JTextField txtNuevaContrasena;
+	private JTextField txtConfirmarContrasena;
+	private JButton btnGuardar;
+	private JButton btnCancelar;
 	public cambioContraseña() {
 		getContentPane().setLayout(null);
 		
@@ -26,26 +28,26 @@ public class cambioContraseña extends JFrame {
 		lblConfirmarContrasea.setBounds(35, 117, 158, 14);
 		getContentPane().add(lblConfirmarContrasea);
 		
-		textField = new JTextField();
-		textField.setBounds(202, 35, 167, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		txtUsuario = new JTextField();
+		txtUsuario.setBounds(202, 35, 167, 20);
+		getContentPane().add(txtUsuario);
+		txtUsuario.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(202, 77, 167, 20);
-		getContentPane().add(textField_1);
+		txtNuevaContrasena = new JTextField();
+		txtNuevaContrasena.setColumns(10);
+		txtNuevaContrasena.setBounds(202, 77, 167, 20);
+		getContentPane().add(txtNuevaContrasena);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(203, 117, 167, 20);
-		getContentPane().add(textField_2);
+		txtConfirmarContrasena = new JTextField();
+		txtConfirmarContrasena.setColumns(10);
+		txtConfirmarContrasena.setBounds(203, 117, 167, 20);
+		getContentPane().add(txtConfirmarContrasena);
 		
-		JButton btnNewButton = new JButton("Guardar");
-		btnNewButton.setBounds(335, 227, 89, 23);
-		getContentPane().add(btnNewButton);
+		btnGuardar = new JButton("Guardar");
+		btnGuardar.setBounds(335, 227, 89, 23);
+		getContentPane().add(btnGuardar);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(35, 227, 89, 23);
 		getContentPane().add(btnCancelar);
 		

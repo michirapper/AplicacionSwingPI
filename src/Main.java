@@ -13,6 +13,7 @@ public class Main {
 		miControlador.setRegistro(miRegistro);
 		miModelo.setLogin(miLogin);
 		miLogin.setControlador(miControlador);
+		miRegistro.setControlador(miControlador);
 		miLogin.setModelo(miModelo);		
 		miLogin.setVisible(true);
 		
