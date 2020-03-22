@@ -3,6 +3,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 
@@ -16,6 +17,7 @@ import javax.swing.JTable;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.table.DefaultTableModel;
 
 public class Empresas extends JFrame {
 	private Controlador miControlador;
@@ -23,12 +25,12 @@ public class Empresas extends JFrame {
 	private JPanel contentPane;
 	private JButton btnPerfil;
 	private JButton btnNotas;
-	private JButton btnCalendario;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private JButton btnInicio;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
+	private JTable table;
 
 	public Empresas() {
 
@@ -52,12 +54,8 @@ public class Empresas extends JFrame {
 		btnAlumnos.setBounds(321, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
-		btnCalendario = new JButton("CALENDARIO");
-		btnCalendario.setBounds(443, 11, 126, 55);
-		getContentPane().add(btnCalendario);
-
 		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(579, 11, 90, 55);
+		btnNotas.setBounds(443, 11, 90, 55);
 		getContentPane().add(btnNotas);
 		Icon foto = new ImageIcon(getClass().getResource("/img/fotoPerfil.png"));
 		btnPerfil = new JButton("");
@@ -76,10 +74,16 @@ public class Empresas extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(68, 111, 760, 343);
 		contentPane.add(scrollPane);
-		
-		JPanel panel = new JPanel();
-		scrollPane.setViewportView(panel);
-		panel.setLayout(null);
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null},
+			},
+			new String[] {
+				"Foto", "Nombre", "Valoracion", "Descripcion", "WEB"
+			}
+		));
+		scrollPane.setViewportView(table);
 	}
 
 	public void gologin() {
