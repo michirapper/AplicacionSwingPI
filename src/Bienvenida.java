@@ -14,7 +14,7 @@ public class Bienvenida extends JFrame {
 
 	public static void main(String[] args) {
 
-		Bienvenida frame = new Bienvenida();
+		Registro frame = new Registro();
 		frame.setVisible(true);
 
 	}

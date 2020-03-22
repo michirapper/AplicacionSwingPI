@@ -19,9 +19,10 @@ public class Vista extends JFrame {
 	private JLabel lblRespuesta;
 	private JButton btnCancelar;
 	private JLabel lblHeOlvidadoMi;
+	private JButton btnRegistro;
 	
 	public Vista () {
-		setTitle("Login MVC");
+		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 421, 285);
 		getContentPane().setLayout(null);
@@ -51,7 +52,7 @@ public class Vista extends JFrame {
 				miControlador.login();
 			}
 		});
-		btnLogin.setBounds(239, 161, 78, 23);
+		btnLogin.setBounds(147, 162, 78, 23);
 		getContentPane().add(btnLogin);
 		
 		lblRespuesta = new JLabel("");
@@ -60,12 +61,21 @@ public class Vista extends JFrame {
 		getContentPane().add(lblRespuesta);
 		
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(45, 161, 93, 23);
+		btnCancelar.setBounds(21, 161, 93, 23);
 		getContentPane().add(btnCancelar);
 		
 		lblHeOlvidadoMi = new JLabel("He olvidado mi contrase\u00F1a.");
 		lblHeOlvidadoMi.setBounds(228, 194, 169, 14);
 		getContentPane().add(lblHeOlvidadoMi);
+		
+		btnRegistro = new JButton("Registro");
+		btnRegistro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goRegistro();
+			}
+		});
+		btnRegistro.setBounds(251, 162, 89, 23);
+		getContentPane().add(btnRegistro);
 	}
 	
 	public void setControlador(Controlador miControlador) {
@@ -93,5 +103,8 @@ public class Vista extends JFrame {
 			System.exit(0);
 		}
 		
+	}
+	public void goRegistro() {
+		miControlador.registro();
 	}
 }
