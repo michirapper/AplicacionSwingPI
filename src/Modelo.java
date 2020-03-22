@@ -1,6 +1,6 @@
 
 public class Modelo {
-	private Vista miVista;
+	private Login miLogin;
 	private final String usrPRF;
 	private final String pwdPRF;
 	private final String usrALM;
@@ -18,8 +18,8 @@ public class Modelo {
 		fallos = 0;
 	}
 
-	public void setVista(Vista miVista) {
-		this.miVista = miVista;
+	public void setLogin(Login miLogin) {
+		this.miLogin = miLogin;
 	}
 
 	public void login(String usr, String pwd) {
@@ -34,7 +34,7 @@ public class Modelo {
 			} else
 				resultado = "Incorrecto";
 		}
-		miVista.actualizar();
+		miLogin.actualizar();
 	}
 
 	public String getResultado() {

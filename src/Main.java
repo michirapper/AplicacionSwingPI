@@ -4,18 +4,17 @@ public class Main {
 	public static void main(String[] args) {
 		Controlador miControlador = new Controlador();
 		Modelo miModelo = new Modelo();
-		Vista miVista = new Vista();
+		Login miLogin = new Login();
 		Registro miRegistro = new Registro();
-		Bienvenida miBienvenida = new Bienvenida();
-		
+		Bienvenida miBienvenida = new Bienvenida();		
 		miControlador.setModelo(miModelo);
-		miControlador.setVista(miVista);
+		miControlador.setLogin(miLogin);
 		miControlador.setBienvenida(miBienvenida);
 		miControlador.setRegistro(miRegistro);
-		miModelo.setVista(miVista);
-		miVista.setControlador(miControlador);
-		miVista.setModelo(miModelo);		
-		miVista.setVisible(true);
+		miModelo.setLogin(miLogin);
+		miLogin.setControlador(miControlador);
+		miLogin.setModelo(miModelo);		
+		miLogin.setVisible(true);
 		
 	}
 

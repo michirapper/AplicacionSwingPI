@@ -1,7 +1,7 @@
 
 public class Controlador {
 	private Modelo miModelo;
-	private Vista miVista;
+	private Login miLogin;
 	private Bienvenida miBienvenida;
 	private Registro miRegistro;
 	
@@ -14,22 +14,26 @@ public class Controlador {
 	public void setModelo(Modelo miModelo) {
 		this.miModelo = miModelo;
 	}
-	public void setVista(Vista miVista) {
-		this.miVista = miVista;
+	public void setLogin(Login miLogin) {
+		this.miLogin = miLogin;
 	}
 	public void login() {
-		String usr = miVista.getUsr();
-		String pwd = miVista.getPwd();
+		String usr = miLogin.getUsr();
+		String pwd = miLogin.getPwd();
 		miModelo.login(usr,pwd);
 		
 	}
 	public void registro() {
-		miVista.setVisible(false);
+		miLogin.setVisible(false);
 		miRegistro.setVisible(true);
 	}
 	public void bienvenida() {
-		miVista.setVisible(false);
+		miLogin.setVisible(false);
 		miBienvenida.setVisible(true);
+	}
+	public void goLogin() {
+		miRegistro.setVisible(false);
+		miLogin.setVisible(true);		
 	}
 	
 }

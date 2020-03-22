@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 
-public class Vista extends JFrame {
+public class Login extends JFrame {
 	private Controlador miControlador;
 	private Modelo miModelo;
 	
@@ -21,7 +21,7 @@ public class Vista extends JFrame {
 	private JLabel lblHeOlvidadoMi;
 	private JButton btnRegistro;
 	
-	public Vista () {
+	public Login () {
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 421, 285);

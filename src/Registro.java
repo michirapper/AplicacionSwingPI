@@ -12,9 +12,10 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Registro extends JFrame {
-
 	private JPanel contentPane;
 	private JTextField txtNombre;
 	private JTextField txtApellidos;
@@ -48,7 +49,7 @@ public class Registro extends JFrame {
 		contentPane.add(btnCancelar);
 		
 		JCheckBox chckbxAceptaLosTerminos = new JCheckBox("Acepta los terminos y condiciones del usuario");
-		chckbxAceptaLosTerminos.setBounds(34, 385, 282, 23);
+		chckbxAceptaLosTerminos.setBounds(10, 385, 348, 23);
 		contentPane.add(chckbxAceptaLosTerminos);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
