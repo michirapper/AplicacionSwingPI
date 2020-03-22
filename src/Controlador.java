@@ -2,12 +2,12 @@
 public class Controlador {
 	private Modelo miModelo;
 	private Login miLogin;
-	private Bienvenida miBienvenida;
+	private pantallaPrincipal miPantallaPrincipal;
 	private Registro miRegistro;
 	private cambioContraseña miCambioContraseña;
 	
-	public void setBienvenida(Bienvenida miBienvenida) {
-		this.miBienvenida = miBienvenida;
+	public void setpantallaPrincipal(pantallaPrincipal miPantallaPrincipal) {
+		this.miPantallaPrincipal = miPantallaPrincipal;
 	}
 	public void setRegistro(Registro miRegistro) {
 		this.miRegistro = miRegistro;
@@ -31,9 +31,9 @@ public class Controlador {
 		miLogin.setVisible(false);
 		miRegistro.setVisible(true);
 	}
-	public void bienvenida() {
+	public void pantallaPrincipal() {
 		miLogin.setVisible(false);
-		miBienvenida.setVisible(true);
+		miPantallaPrincipal.setVisible(true);
 	}
 	public void goLoginRegistro() {
 		miRegistro.setVisible(false);	

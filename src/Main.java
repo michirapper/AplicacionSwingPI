@@ -6,11 +6,11 @@ public class Main {
 		Modelo miModelo = new Modelo();
 		Login miLogin = new Login();
 		Registro miRegistro = new Registro();
-		Bienvenida miBienvenida = new Bienvenida();
+		pantallaPrincipal miPantallaPrincipal = new pantallaPrincipal();
 		cambioContraseña miCambioContraseña = new cambioContraseña();
 		miControlador.setModelo(miModelo);
 		miControlador.setLogin(miLogin);
-		miControlador.setBienvenida(miBienvenida);
+		miControlador.setpantallaPrincipal(miPantallaPrincipal);
 		miControlador.setRegistro(miRegistro);
 		miControlador.setCambioContrasena(miCambioContraseña);
 		miModelo.setLogin(miLogin);

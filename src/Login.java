@@ -19,7 +19,7 @@ public class Login extends JFrame {
 	private JPasswordField txtPwd;
 	private JButton btnLogin;
 	private JLabel lblRespuesta;
-	private JButton btnCancelar;
+	private JButton btnExit;
 	private JLabel lblHeOlvidadoMi;
 	private JButton btnRegistro;
 
@@ -62,9 +62,14 @@ public class Login extends JFrame {
 		lblRespuesta.setBounds(85, 137, 212, 14);
 		getContentPane().add(lblRespuesta);
 
-		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(21, 161, 93, 23);
-		getContentPane().add(btnCancelar);
+		btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnExit.setBounds(21, 161, 93, 23);
+		getContentPane().add(btnExit);
 
 		lblHeOlvidadoMi = new JLabel("He olvidado mi contrase\u00F1a.");
 		lblHeOlvidadoMi.addMouseListener(new MouseAdapter() {
@@ -105,7 +110,7 @@ public class Login extends JFrame {
 	public void actualizar() {
 		String resultado = miModelo.getResultado();
 		if (resultado.equals("Correcto")) {
-			miControlador.bienvenida();
+			miControlador.pantallaPrincipal();
 		} else if (resultado.equals("Incorrecto")) {
 			lblRespuesta.setText("Usuario o contraseña incorrectos");
 		} else {
