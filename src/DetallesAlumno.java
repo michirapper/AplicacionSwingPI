@@ -9,7 +9,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 
-public class detallesAlumno extends JFrame{
+public class DetallesAlumno extends JFrame{
 	private Controlador miControlador;
 	private JPanel contentPane;
 	private JButton btnPerfil;
@@ -21,7 +21,7 @@ public class detallesAlumno extends JFrame{
 	private Icon iconoBoton;
 	private JTextField textField;
 	
-	public detallesAlumno() {
+	public DetallesAlumno() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -47,7 +47,7 @@ public class detallesAlumno extends JFrame{
 
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
-		btnPerfil.setBounds(900, 11, 22, 22);
+		btnPerfil.setBounds(900, 11, 46, 55);
 		getContentPane().add(btnPerfil);
 		
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
@@ -55,7 +55,7 @@ public class detallesAlumno extends JFrame{
 		contentPane.add(btnCerrarSesion);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(detallesAlumno.class.getResource("/img/fotoPerfil.png")));
+		lblNewLabel.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/fotoPerfil.png")));
 		lblNewLabel.setBounds(96, 132, 90, 90);
 		contentPane.add(lblNewLabel);
 		
@@ -74,7 +74,7 @@ public class detallesAlumno extends JFrame{
 		textField.setColumns(10);
 		
 		JButton button = new JButton("");
-		button.setIcon(new ImageIcon(detallesAlumno.class.getResource("/img/380020.png")));
+		button.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/380020.png")));
 		button.setBounds(344, 200, 22, 22);
 		contentPane.add(button);
 		
@@ -87,7 +87,7 @@ public class detallesAlumno extends JFrame{
 		contentPane.add(textArea);
 		
 		JButton button_1 = new JButton("");
-		button_1.setIcon(new ImageIcon(detallesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
+		button_1.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
 		button_1.setBounds(195, 353, 138, 37);
 		contentPane.add(button_1);
 	}

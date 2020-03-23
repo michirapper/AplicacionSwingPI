@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import java.awt.Font;
 
-public class agregarEmpresas extends JFrame {
+public class AsignarEmpresas extends JFrame {
 	private Controlador miControlador;
 
 	private JPanel contentPane;
@@ -21,7 +21,7 @@ public class agregarEmpresas extends JFrame {
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
 
-	public agregarEmpresas() {
+	public AsignarEmpresas() {
 		setTitle("Cambio contraseña");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
@@ -62,12 +62,12 @@ public class agregarEmpresas extends JFrame {
 		contentPane.add(txtrOracleCompanionNombre);
 		
 		JButton button = new JButton("");
-		button.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/380020.png")));
+		button.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/380020.png")));
 		button.setBounds(289, 342, 22, 22);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("");
-		button_1.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/descarte_peque.png")));
+		button_1.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/descarte_peque.png")));
 		button_1.setBounds(222, 342, 22, 22);
 		contentPane.add(button_1);
 		
@@ -88,27 +88,27 @@ public class agregarEmpresas extends JFrame {
 		contentPane.add(button_1_1);
 		
 		JButton button_2 = new JButton("");
-		button_2.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/380020.png")));
+		button_2.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/380020.png")));
 		button_2.setBounds(605, 145, 22, 22);
 		contentPane.add(button_2);
 		
 		JButton button_1_2 = new JButton("");
-		button_1_2.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/descarte_peque.png")));
+		button_1_2.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/descarte_peque.png")));
 		button_1_2.setBounds(538, 209, 22, 22);
 		contentPane.add(button_1_2);
 		
 		JButton button_3 = new JButton("");
-		button_3.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/380020.png")));
+		button_3.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/380020.png")));
 		button_3.setBounds(605, 209, 22, 22);
 		contentPane.add(button_3);
 		
 		JButton button_1_3 = new JButton("");
-		button_1_3.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/descarte_peque.png")));
+		button_1_3.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/descarte_peque.png")));
 		button_1_3.setBounds(538, 272, 22, 22);
 		contentPane.add(button_1_3);
 		
 		JButton button_4 = new JButton("");
-		button_4.setIcon(new ImageIcon(agregarEmpresas.class.getResource("/img/380020.png")));
+		button_4.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/380020.png")));
 		button_4.setBounds(605, 272, 22, 22);
 		contentPane.add(button_4);
 	}
