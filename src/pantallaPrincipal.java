@@ -25,7 +25,7 @@ public class pantallaPrincipal extends JFrame {
 
 	public pantallaPrincipal() {
 
-		setTitle("Cambio contraseña");
+		setTitle("HOME");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -34,6 +34,11 @@ public class pantallaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 
 		btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goEmpresas();
+			}
+		});
 		btnEmpresas.setBounds(167, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
@@ -59,6 +64,7 @@ public class pantallaPrincipal extends JFrame {
 		JButton btnUsuario_1 = new JButton("");
 		btnUsuario_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btnUsuario_1.setBounds(244, 106, 55, 55);
@@ -162,12 +168,17 @@ public class pantallaPrincipal extends JFrame {
 		contentPane.add(btnCerrarSesion);
 	}
 
-	public void gologin() {
-		miControlador.goLoginPantallaPrincipal();
-
+	public void goEmpresas() {
+		miControlador.goEmpresasPantallaPrincipal();
+		
 	}
 
 	public void setControlador(Controlador miControlador) {
 		this.miControlador = miControlador;
 	}
+	public void gologin() {
+		miControlador.goLoginPantallaPrincipal();
+
+	}
+	
 }

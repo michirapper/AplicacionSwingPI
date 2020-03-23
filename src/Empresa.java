@@ -108,5 +108,12 @@ public class Empresa extends JFrame {
 		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
 		btnAsegnarEmpresas.setBounds(543, 11, 182, 55);
 		contentPane.add(btnAsegnarEmpresas);
+		
+		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa.setBounds(29, 11, 151, 55);
+		contentPane.add(btnAgregarEmpresa);
+	}
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }

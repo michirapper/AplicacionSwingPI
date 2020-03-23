@@ -8,19 +8,22 @@ public class Main {
 		Registro miRegistro = new Registro();
 		pantallaPrincipal miPantallaPrincipal = new pantallaPrincipal();
 		cambioContraseña miCambioContraseña = new cambioContraseña();
+		Empresa miEmpresa = new Empresa();
 		miControlador.setModelo(miModelo);
 		miControlador.setLogin(miLogin);
 		miControlador.setpantallaPrincipal(miPantallaPrincipal);
 		miControlador.setRegistro(miRegistro);
 		miControlador.setCambioContrasena(miCambioContraseña);
+		miControlador.setEmpresa(miEmpresa);
 		miModelo.setLogin(miLogin);
 		miLogin.setControlador(miControlador);
 		miRegistro.setControlador(miControlador);
 		miCambioContraseña.setControlador(miControlador);
 		miPantallaPrincipal.setControlador(miControlador);
-		miLogin.setModelo(miModelo);		
+		miEmpresa.setControlador(miControlador);
+		miLogin.setModelo(miModelo);
 		miLogin.setVisible(true);
-		
+
 	}
 
 }
