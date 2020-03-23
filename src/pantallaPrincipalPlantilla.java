@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 public class pantallaPrincipalPlantilla extends JFrame {
 	private Controlador miControlador;
@@ -17,7 +20,6 @@ public class pantallaPrincipalPlantilla extends JFrame {
 	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
-	private JButton btnInicio;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
 
@@ -29,10 +31,6 @@ public class pantallaPrincipalPlantilla extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		btnInicio = new JButton("INICIO");
-		btnInicio.setBounds(96, 11, 90, 55);
-		getContentPane().add(btnInicio);
 
 		btnEmpresas = new JButton("EMPRESAS");
 		btnEmpresas.setBounds(196, 11, 115, 55);
@@ -54,5 +52,13 @@ public class pantallaPrincipalPlantilla extends JFrame {
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
+		
+		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
+		btnAsegnarEmpresas.setBounds(543, 11, 182, 55);
+		contentPane.add(btnAsegnarEmpresas);
+		
+		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa.setBounds(29, 11, 151, 55);
+		contentPane.add(btnAgregarEmpresa);
 	}
 }
