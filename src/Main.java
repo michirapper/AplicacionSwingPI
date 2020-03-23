@@ -12,6 +12,8 @@ public class Main {
 		DetalleEmpresa miDetalleEmpresa = new DetalleEmpresa();
 		AsignarEmpresas miAsignarEmpresas = new AsignarEmpresas();
 		DetallesAlumno miDetallesAlumno = new DetallesAlumno();
+		AgregarEmpresa miAgregarEmpresa = new AgregarEmpresa();
+		AjustesAlumno miAjustesAlumno = new AjustesAlumno();
 		miControlador.setModelo(miModelo);
 		miControlador.setLogin(miLogin);
 		miControlador.setpantallaPrincipal(miPantallaPrincipal);
@@ -21,6 +23,8 @@ public class Main {
 		miControlador.setDetalleEmpresa(miDetalleEmpresa);
 		miControlador.setAsignarEmpresas(miAsignarEmpresas);
 		miControlador.setDetallesAlumno(miDetallesAlumno);
+		miControlador.setAgregarEmpresa(miAgregarEmpresa);
+		miControlador.setAjustesAlumno(miAjustesAlumno);
 		miModelo.setLogin(miLogin);
 		miLogin.setControlador(miControlador);
 		miRegistro.setControlador(miControlador);
@@ -30,6 +34,8 @@ public class Main {
 		miDetalleEmpresa.setControlador(miControlador);
 		miAsignarEmpresas.setControlador(miControlador);
 		miDetallesAlumno.setControlador(miControlador);
+		miAgregarEmpresa.setControlador(miControlador);
+		miAjustesAlumno.setControlador(miControlador);
 		miLogin.setModelo(miModelo);
 		miLogin.setVisible(true);
 

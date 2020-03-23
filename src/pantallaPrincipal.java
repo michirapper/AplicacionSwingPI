@@ -64,6 +64,7 @@ public class pantallaPrincipal extends JFrame {
 		JButton btnUsuario_1 = new JButton("");
 		btnUsuario_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				goAjustesAlumno();
 
 			}
 		});
@@ -166,6 +167,11 @@ public class pantallaPrincipal extends JFrame {
 		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
+	}
+
+	protected void goAjustesAlumno() {
+		miControlador.goAjustesAlumnoPantallaPrincipal();
+		
 	}
 
 	public void goPerfil() {

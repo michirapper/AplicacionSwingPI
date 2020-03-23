@@ -3,15 +3,25 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.UIManager;
 
 public class AgregarEmpresa extends JFrame {
-
+	private Controlador miControlador;
+	
+	private JPanel contentPane;
+	private JButton btnPerfil;
+	private JButton btnOracle;
+	private JButton btnCerrarSesion;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -21,37 +31,14 @@ public class AgregarEmpresa extends JFrame {
 	private JTextField textField_6;
 
 	public AgregarEmpresa() {
-		setBounds(100, 100, 794, 566);
+		setTitle("Agregar Empresa");
+		setBounds(100, 100, 913, 597);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setLayout(null);
+		getContentPane().setLayout(null);     
 
 		JButton btnAgregarEmpresas = new JButton("AGREGAR EMPRESAS");
 		btnAgregarEmpresas.setBounds(-245, 11, 182, 55);
 		getContentPane().add(btnAgregarEmpresas);
-
-		JButton btnPerfil = new JButton("");
-		btnPerfil.setBounds(698, 33, 55, 55);
-		getContentPane().add(btnPerfil);
-
-		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
-		btnCerrarSesion.setBounds(562, 11, 115, 23);
-		getContentPane().add(btnCerrarSesion);
-
-		JButton btnEmpresas = new JButton("EMPRESAS");
-		btnEmpresas.setBounds(10, 11, 115, 55);
-		getContentPane().add(btnEmpresas);
-
-		JButton btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(135, 11, 112, 55);
-		getContentPane().add(btnAlumnos);
-
-		JButton btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(257, 11, 90, 55);
-		getContentPane().add(btnNotas);
-
-		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
-		btnAsegnarEmpresas.setBounds(357, 11, 182, 55);
-		getContentPane().add(btnAsegnarEmpresas);
 
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -126,5 +113,76 @@ public class AgregarEmpresa extends JFrame {
 		JButton btnNewButton_1 = new JButton("Subir Imagen");
 		btnNewButton_1.setBounds(357, 349, 202, 23);
 		getContentPane().add(btnNewButton_1);
+		
+		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa.setBounds(10, 11, 151, 55);
+		getContentPane().add(btnAgregarEmpresa);
+		
+		JButton btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goEmpresas();
+			}
+		});
+		btnEmpresas.setBounds(201, 11, 115, 55);
+		getContentPane().add(btnEmpresas);
+		
+		JButton btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAlumnos();
+			}
+		});
+		btnAlumnos.setBounds(340, 11, 112, 55);
+		getContentPane().add(btnAlumnos);
+		
+		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
+		btnAsegnarEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAsignarEmpresas();
+			}
+		});
+		btnAsegnarEmpresas.setBounds(462, 11, 182, 55);
+		getContentPane().add(btnAsegnarEmpresas);
+		
+		btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goLogin();
+			}
+		});
+		btnCerrarSesion.setBounds(707, 11, 115, 23);
+		getContentPane().add(btnCerrarSesion);
+		
+		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
+		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
+		btnPerfil.setBounds(832, 11, 55, 55);
+		getContentPane().add(btnPerfil);	
+	}
+	public void goPerfil() {
+		miControlador.goPerfilAgregarEmpresa();
+		
+	}
+	public void goLogin() {
+		miControlador.goLoginAgregarEmpresa();
+		
+	}
+	public void goAsignarEmpresas() {
+		miControlador.goAsignarEmpresaAgregarEmpresa();		
+	}
+	public void goAlumnos() {
+		miControlador.goAlumnosAgregarEmpresa();
+		
+	}
+	public void goEmpresas() {
+		miControlador.goEmpresaAgregarEmpesa();
+	}
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }

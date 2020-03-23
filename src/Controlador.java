@@ -9,12 +9,20 @@ public class Controlador {
 	private DetalleEmpresa miDetalleEmpresa;
 	private AsignarEmpresas miAsignarEmpresas;
 	private DetallesAlumno miDetallesAlumno;
+	private AgregarEmpresa miAgregarEmpresa;
+	private AjustesAlumno miAjustesAlumno;
 	
 	public void setpantallaPrincipal(pantallaPrincipal miPantallaPrincipal) {
 		this.miPantallaPrincipal = miPantallaPrincipal;
 	}
 	public void setAsignarEmpresas(AsignarEmpresas miAsignarEmpresas) {
 		this.miAsignarEmpresas = miAsignarEmpresas;
+	}
+	public void setAjustesAlumno(AjustesAlumno miAjustesAlumno) {
+		this.miAjustesAlumno = miAjustesAlumno;
+	}
+	public void setAgregarEmpresa(AgregarEmpresa miAgregarEmpresa) {
+		this.miAgregarEmpresa = miAgregarEmpresa;
 	}
 	public void setDetallesAlumno(DetallesAlumno miDetallesAlumno) {
 		this.miDetallesAlumno = miDetallesAlumno;
@@ -144,6 +152,72 @@ public class Controlador {
 	public void goLoginDetalleEmpresa() {
 		miDetalleEmpresa.setVisible(false);
 		miLogin.setVisible(true);
+		
+	}
+	public void goAgregarEmpresaEmpresa() {
+		miEmpresa.setVisible(false);
+		miAgregarEmpresa.setVisible(true);
+	}
+	public void goEmpresaAgregarEmpesa() {
+		miAgregarEmpresa.setVisible(false);
+		miEmpresa.setVisible(true);		
+	}
+	public void goAlumnosAgregarEmpresa() {
+		miAgregarEmpresa.setVisible(false);
+		miPantallaPrincipal.setVisible(true);		
+	}
+	public void goAsignarEmpresaAgregarEmpresa() {
+		miAgregarEmpresa.setVisible(false);
+		miAsignarEmpresas.setVisible(true);
+		
+	}
+	public void goLoginAgregarEmpresa() {
+		miAgregarEmpresa.setVisible(false);
+		miLogin.setVisible(true);
+		
+	}
+	public void goPerfilAgregarEmpresa() {
+		miAgregarEmpresa.setVisible(false);
+		miDetallesAlumno.setVisible(true);
+		
+	}
+	public void goAgregarEmpresaDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
+		miAgregarEmpresa.setVisible(true);
+		
+	}
+	public void goPerfilAsignarEmpresa() {
+		miAgregarEmpresa.setVisible(false);
+		miDetallesAlumno.setVisible(true);
+		
+	}
+	public void goPerfilDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
+		miDetallesAlumno.setVisible(true);
+		
+	}
+	public void goAjustesAlumnoPantallaPrincipal() {
+		miPantallaPrincipal.setVisible(false);
+		miAjustesAlumno.setVisible(true);		
+		
+	}
+	public void goEmpresaAjustesAlumno() {
+		miAjustesAlumno.setVisible(false);
+		miEmpresa.setVisible(true);
+		
+	}
+	public void goAlumnosAjustesAlumno() {
+		miAjustesAlumno.setVisible(false);
+		miPantallaPrincipal.setVisible(true);		
+	}
+	public void goLoginAjustesAlumno() {
+		miAjustesAlumno.setVisible(false);
+		miLogin.setVisible(true);
+		
+	}
+	public void goPerfilAjustesAlumno() {
+		miAjustesAlumno.setVisible(false);
+		miAjustesAlumno.setVisible(true);
 		
 	}
 	

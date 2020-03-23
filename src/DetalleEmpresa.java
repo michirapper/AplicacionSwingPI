@@ -35,6 +35,11 @@ public class DetalleEmpresa extends JFrame {
 		getContentPane().add(txtpnOracleCorporationEs);
 
 		btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAgregarEmpresa();
+			}
+		});
 		btnAgregarEmpresa.setBounds(113, 11, 151, 55);
 		getContentPane().add(btnAgregarEmpresa);
 
@@ -85,9 +90,24 @@ public class DetalleEmpresa extends JFrame {
 		getContentPane().add(lblNewLabel_2);
 
 		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
 		btnPerfil.setIcon(new ImageIcon(DetalleEmpresa.class.getResource("img/fotoPerfil.png")));
 		btnPerfil.setBounds(881, 11, 55, 55);
 		getContentPane().add(btnPerfil);
+	}
+
+	protected void goPerfil() {
+		miControlador.goPerfilDetalleEmpresa();
+		
+	}
+
+	protected void goAgregarEmpresa() {
+		miControlador.goAgregarEmpresaDetalleEmpresa();
+		
 	}
 
 	protected void goLogin() {

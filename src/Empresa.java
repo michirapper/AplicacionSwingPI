@@ -134,8 +134,17 @@ public class Empresa extends JFrame {
 		contentPane.add(btnAsegnarEmpresas);
 		
 		btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAgregarEmpresa();
+			}
+		});
 		btnAgregarEmpresa.setBounds(91, 11, 151, 55);
 		contentPane.add(btnAgregarEmpresa);
+	}
+	public void goAgregarEmpresa() {
+		miControlador.goAgregarEmpresaEmpresa();
+		
 	}
 	public void goPerfil() {
 		miControlador.goPerfilEmpresa();

@@ -49,6 +49,11 @@ public class AsignarEmpresas extends JFrame {
 		getContentPane().add(btnAlumnos);
 
 		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
 		btnPerfil.setBounds(900, 11, 55, 55);
 		getContentPane().add(btnPerfil);
@@ -118,6 +123,10 @@ public class AsignarEmpresas extends JFrame {
 		button_4.setIcon(new ImageIcon(AsignarEmpresas.class.getResource("/img/380020.png")));
 		button_4.setBounds(605, 272, 22, 22);
 		contentPane.add(button_4);
+	}
+	protected void goPerfil() {
+		miControlador.goPerfilAsignarEmpresa();
+		
 	}
 	protected void goLogin() {
 		miControlador.goLoginAsignarEmpresa();

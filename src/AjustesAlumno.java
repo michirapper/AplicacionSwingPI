@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AjustesAlumno extends JFrame{
 	private Controlador miControlador;
@@ -30,19 +32,39 @@ public class AjustesAlumno extends JFrame{
 		contentPane.setLayout(null);
 
 		btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goEmpresa();
+			}
+		});
 		btnEmpresas.setBounds(196, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAlumnos();
+			}
+		});
 		btnAlumnos.setBounds(516, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
 		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
 		btnPerfil.setBounds(900, 11, 46, 55);
 		getContentPane().add(btnPerfil);
 		
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goLogin();
+			}
+		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
 		
@@ -51,7 +73,7 @@ public class AjustesAlumno extends JFrame{
 		lblNewLabel.setBounds(96, 132, 90, 90);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblManuelSevilla = new JLabel("Manuel Sevilla");
+		JLabel lblManuelSevilla = new JLabel("Miguel");
 		lblManuelSevilla.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		lblManuelSevilla.setBounds(96, 221, 90, 14);
 		contentPane.add(lblManuelSevilla);
@@ -82,5 +104,24 @@ public class AjustesAlumno extends JFrame{
 		button_1.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
 		button_1.setBounds(195, 353, 138, 37);
 		contentPane.add(button_1);
+	}
+	protected void goPerfil() {
+		miControlador.goPerfilAjustesAlumno();
+		
+	}
+	protected void goLogin() {
+		miControlador.goLoginAjustesAlumno();
+		
+	}
+	protected void goAlumnos() {
+		miControlador.goAlumnosAjustesAlumno();
+		
+	}
+	protected void goEmpresa() {
+		miControlador.goEmpresaAjustesAlumno();
+		
+	}
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }
