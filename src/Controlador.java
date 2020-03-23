@@ -86,5 +86,20 @@ public class Controlador {
 		miEmpresa.setVisible(false);
 		miAsignarEmpresas.setVisible(true);
 	}
+	public void goEmpresaAsignarEmpresa() {
+		miAsignarEmpresas.setVisible(false);
+		miEmpresa.setVisible(true);
+		
+	}
+	public void goAlumnosAsignarEmpresa() {
+		miAsignarEmpresas.setVisible(false);
+		miPantallaPrincipal.setVisible(true);
+		
+	}
+	public void goLoginAsignarEmpresa() {
+		miAsignarEmpresas.setVisible(false);
+		miLogin.setVisible(true);
+		
+	}
 	
 }

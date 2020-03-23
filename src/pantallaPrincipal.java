@@ -17,7 +17,6 @@ public class pantallaPrincipal extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btnPerfil;
-	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
@@ -43,12 +42,8 @@ public class pantallaPrincipal extends JFrame {
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(368, 11, 112, 55);
+		btnAlumnos.setBounds(550, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
-
-		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(571, 11, 90, 55);
-		getContentPane().add(btnNotas);
 		Icon foto = new ImageIcon(getClass().getResource("/img/fotoPerfil.png"));
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(foto);

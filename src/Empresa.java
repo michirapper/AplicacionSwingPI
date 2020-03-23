@@ -17,7 +17,6 @@ public class Empresa extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btnPerfil;
-	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
@@ -39,7 +38,7 @@ public class Empresa extends JFrame {
 		contentPane.setLayout(null);
 
 		btnEmpresas = new JButton("EMPRESAS");
-		btnEmpresas.setBounds(196, 11, 115, 55);
+		btnEmpresas.setBounds(282, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
@@ -48,12 +47,8 @@ public class Empresa extends JFrame {
 				goAlumnos();
 			}
 		});
-		btnAlumnos.setBounds(321, 11, 112, 55);
+		btnAlumnos.setBounds(421, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
-
-		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(443, 11, 90, 55);
-		getContentPane().add(btnNotas);
 
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
@@ -134,7 +129,7 @@ public class Empresa extends JFrame {
 		contentPane.add(btnAsegnarEmpresas);
 		
 		btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
-		btnAgregarEmpresa.setBounds(29, 11, 151, 55);
+		btnAgregarEmpresa.setBounds(91, 11, 151, 55);
 		contentPane.add(btnAgregarEmpresa);
 	}
 	public void goAsignarEmpresas() {

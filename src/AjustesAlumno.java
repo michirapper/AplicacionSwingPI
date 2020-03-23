@@ -14,7 +14,6 @@ public class AjustesAlumno extends JFrame{
 	
 	private JPanel contentPane;
 	private JButton btnPerfil;
-	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
@@ -34,12 +33,8 @@ public class AjustesAlumno extends JFrame{
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(380, 11, 112, 55);
+		btnAlumnos.setBounds(516, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
-
-		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(557, 11, 90, 55);
-		getContentPane().add(btnNotas);
 
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));

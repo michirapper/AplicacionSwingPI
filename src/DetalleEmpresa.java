@@ -27,20 +27,16 @@ public class DetalleEmpresa extends JFrame {
 		 getContentPane().add(txtpnOracleCorporationEs);
 		
 		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
-		btnAgregarEmpresa.setBounds(10, 11, 151, 55);
+		btnAgregarEmpresa.setBounds(113, 11, 151, 55);
 		 getContentPane().add(btnAgregarEmpresa);
 		
 		JButton btnEmpresas = new JButton("EMPRESAS");
-		btnEmpresas.setBounds(177, 11, 115, 55);
+		btnEmpresas.setBounds(274, 11, 115, 55);
 		 getContentPane().add(btnEmpresas);
 		
 		JButton btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(302, 11, 112, 55);
+		btnAlumnos.setBounds(402, 11, 112, 55);
 		 getContentPane().add(btnAlumnos);
-		
-		JButton btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(424, 11, 90, 55);
-		 getContentPane().add(btnNotas);
 		
 		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
 		btnAsegnarEmpresas.setBounds(524, 11, 182, 55);

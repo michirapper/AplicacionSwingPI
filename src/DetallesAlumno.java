@@ -13,7 +13,6 @@ public class DetallesAlumno extends JFrame{
 	private Controlador miControlador;
 	private JPanel contentPane;
 	private JButton btnPerfil;
-	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
@@ -33,12 +32,8 @@ public class DetallesAlumno extends JFrame{
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(402, 11, 112, 55);
+		btnAlumnos.setBounds(535, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
-
-		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(574, 11, 90, 55);
-		getContentPane().add(btnNotas);
 
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));

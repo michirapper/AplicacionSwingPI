@@ -8,13 +8,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AsignarEmpresas extends JFrame {
 	private Controlador miControlador;
 
 	private JPanel contentPane;
 	private JButton btnPerfil;
-	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
@@ -30,16 +31,22 @@ public class AsignarEmpresas extends JFrame {
 		contentPane.setLayout(null);
 
 		btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goEmpresa();
+			}
+		});
 		btnEmpresas.setBounds(196, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAlumnos();
+			}
+		});
 		btnAlumnos.setBounds(386, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
-
-		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(579, 11, 90, 55);
-		getContentPane().add(btnNotas);
 
 		btnPerfil = new JButton("");
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
@@ -47,6 +54,11 @@ public class AsignarEmpresas extends JFrame {
 		getContentPane().add(btnPerfil);
 		
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goLogin();
+			}
+		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
 		
@@ -107,7 +119,20 @@ public class AsignarEmpresas extends JFrame {
 		button_4.setBounds(605, 272, 22, 22);
 		contentPane.add(button_4);
 	}
+	protected void goLogin() {
+		miControlador.goLoginAsignarEmpresa();
+		
+	}
+	public void goAlumnos() {
+		miControlador.goAlumnosAsignarEmpresa();
+		
+	}
+	public void goEmpresa() {
+		miControlador.goEmpresaAsignarEmpresa();
+		
+	}
 	public void setControlador(Controlador miControlador) {
 		this.miControlador = miControlador;
 	}
+	
 }
