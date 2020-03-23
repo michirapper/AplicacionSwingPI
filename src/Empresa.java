@@ -24,6 +24,10 @@ public class Empresa extends JFrame {
 	private Icon iconoBoton;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
+	private JButton btnOracle;
+	private JButton btnAgregarEmpresa;
+	private JButton btnAsegnarEmpresas;
+	private JButton btnCerrarSesion;
 
 	public Empresa() {
 		setTitle("Cambio contraseña");
@@ -56,14 +60,24 @@ public class Empresa extends JFrame {
 		btnPerfil.setBounds(900, 11, 55, 55);
 		getContentPane().add(btnPerfil);
 		
-		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goLogin();
+			}
+		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
 		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(Empresa.class.getResource("/img/oracle-logo.png")));
-		lblNewLabel.setBounds(29, 77, 646, 209);
-		contentPane.add(lblNewLabel);
+		btnOracle = new JButton("");     
+		btnOracle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goDetalleEmpresa();
+			}
+		});
+        btnOracle.setIcon(new ImageIcon(Empresa.class.getResource("/img/oracle-logo.png")));
+        btnOracle.setBounds(29, 77, 632, 209);
+        contentPane.add(btnOracle);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/deloitte.png")));
@@ -110,13 +124,30 @@ public class Empresa extends JFrame {
 		btnFbDeloitte.setBounds(732, 426, 90, 73);
 		contentPane.add(btnFbDeloitte);
 		
-		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
+		btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
+		btnAsegnarEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAsignarEmpresas();
+			}
+		});
 		btnAsegnarEmpresas.setBounds(543, 11, 182, 55);
 		contentPane.add(btnAsegnarEmpresas);
 		
-		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
+		btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
 		btnAgregarEmpresa.setBounds(29, 11, 151, 55);
 		contentPane.add(btnAgregarEmpresa);
+	}
+	public void goAsignarEmpresas() {
+		miControlador.goAsignarEmpresaEmpresa();
+		
+	}
+	public void goDetalleEmpresa() {
+		miControlador.goDetalleEmpresaEmpresa();
+		
+	}
+	public void goLogin() {
+		miControlador.goLoginEmpresa();
+		
 	}
 	public void goAlumnos() {
 		miControlador.goAlumnosEmpresa();

@@ -6,9 +6,17 @@ public class Controlador {
 	private Registro miRegistro;
 	private cambioContraseña miCambioContraseña;
 	private Empresa	miEmpresa;
+	private DetalleEmpresa miDetalleEmpresa;
+	private AsignarEmpresas miAsignarEmpresas;
 	
 	public void setpantallaPrincipal(pantallaPrincipal miPantallaPrincipal) {
 		this.miPantallaPrincipal = miPantallaPrincipal;
+	}
+	public void setAsignarEmpresas(AsignarEmpresas miAsignarEmpresas) {
+		this.miAsignarEmpresas = miAsignarEmpresas;
+	}
+	public void setDetalleEmpresa(DetalleEmpresa miDetalleEmpresa) {
+		this.miDetalleEmpresa = miDetalleEmpresa;
 	}
 	public void setRegistro(Registro miRegistro) {
 		this.miRegistro = miRegistro;
@@ -64,6 +72,19 @@ public class Controlador {
 	public void goAlumnosEmpresa() {
 		miEmpresa.setVisible(false);
 		miPantallaPrincipal.setVisible(true);		
+	}
+	public void goLoginEmpresa() {
+		miEmpresa.setVisible(false);
+		miLogin.setVisible(true);		
+	}
+	public void goDetalleEmpresaEmpresa() {
+		miEmpresa.setVisible(false);
+		miDetalleEmpresa.setVisible(true);
+		
+	}
+	public void goAsignarEmpresaEmpresa() {
+		miEmpresa.setVisible(false);
+		miAsignarEmpresas.setVisible(true);
 	}
 	
 }

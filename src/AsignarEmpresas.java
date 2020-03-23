@@ -107,4 +107,7 @@ public class AsignarEmpresas extends JFrame {
 		button_4.setBounds(605, 272, 22, 22);
 		contentPane.add(button_4);
 	}
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
+	}
 }
