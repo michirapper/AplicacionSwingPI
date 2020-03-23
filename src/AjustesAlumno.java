@@ -1,82 +1,90 @@
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
 
-public class AjustesAlumno {
-
-	private JFrame frame;
-	private JTextField textCurriculum;
-	private JTextField textEmpresas;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AjustesAlumno window = new AjustesAlumno();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
+public class AjustesAlumno extends JFrame{
+	private Controlador miControlador;
+	
+	private JPanel contentPane;
+	private JButton btnPerfil;
+	private JButton btnNotas;
+	private JButton btnAlumnos;
+	private JButton btnEmpresas;
+	private ImageIcon imagenBoton;
+	private Icon iconoBoton;
+	private JTextField textField;
+	
 	public AjustesAlumno() {
-		initialize();
-	}
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 981, 565);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.setBounds(196, 11, 115, 55);
+		getContentPane().add(btnEmpresas);
+
+		btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.setBounds(380, 11, 112, 55);
+		getContentPane().add(btnAlumnos);
+
+		btnNotas = new JButton("NOTAS");
+		btnNotas.setBounds(557, 11, 90, 55);
+		getContentPane().add(btnNotas);
+
+		btnPerfil = new JButton("");
+		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
+		btnPerfil.setBounds(900, 11, 46, 55);
+		getContentPane().add(btnPerfil);
 		
-		JLabel lblIcono = new JLabel("");
-		lblIcono.setIcon(new ImageIcon(AjustesAlumno.class.getResource("/img/iconfinder_user-alt_285645.png")));
-		lblIcono.setBounds(10, 40, 92, 57);
-		frame.getContentPane().add(lblIcono);
+		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.setBounds(775, 11, 115, 23);
+		contentPane.add(btnCerrarSesion);
 		
-		JLabel lblAjustes = new JLabel("Miguel");
-		lblAjustes.setBounds(20, 98, 37, 14);
-		frame.getContentPane().add(lblAjustes);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/fotoPerfil.png")));
+		lblNewLabel.setBounds(96, 132, 90, 90);
+		contentPane.add(lblNewLabel);
 		
-		textCurriculum = new JTextField();
-		textCurriculum.setBounds(80, 77, 96, 20);
-		frame.getContentPane().add(textCurriculum);
-		textCurriculum.setColumns(10);
+		JLabel lblManuelSevilla = new JLabel("Manuel Sevilla");
+		lblManuelSevilla.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblManuelSevilla.setBounds(96, 221, 90, 14);
+		contentPane.add(lblManuelSevilla);
 		
-		JButton btnEnviar = new JButton("");
-		btnEnviar.setIcon(new ImageIcon(AjustesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
-		btnEnviar.setBounds(186, 64, 54, 41);
-		frame.getContentPane().add(btnEnviar);
+		JLabel lblNewLabel_1 = new JLabel("ALUMNO");
+		lblNewLabel_1.setBounds(117, 246, 46, 14);
+		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblEmpresas = new JLabel("Empresas favoritas");
-		lblEmpresas.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblEmpresas.setBounds(65, 116, 178, 33);
-		frame.getContentPane().add(lblEmpresas);
+		textField = new JTextField();
+		textField.setBounds(196, 200, 137, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		
-		textEmpresas = new JTextField();
-		textEmpresas.setBounds(65, 149, 178, 68);
-		frame.getContentPane().add(textEmpresas);
-		textEmpresas.setColumns(10);
+		JButton button = new JButton("");
+		button.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/380020.png")));
+		button.setBounds(344, 200, 22, 22);
+		contentPane.add(button);
 		
-		JButton btnEnviar1 = new JButton("");
-		btnEnviar1.setIcon(new ImageIcon(AjustesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
-		btnEnviar1.setBounds(104, 217, 89, 33);
-		frame.getContentPane().add(btnEnviar1);
+		JLabel lblEmpresasFavoritas = new JLabel("Empresas favoritas");
+		lblEmpresasFavoritas.setBounds(196, 232, 137, 14);
+		contentPane.add(lblEmpresasFavoritas);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(196, 252, 202, 90);
+		contentPane.add(textArea);
+		
+		JButton button_1 = new JButton("");
+		button_1.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
+		button_1.setBounds(195, 353, 138, 37);
+		contentPane.add(button_1);
 	}
 }

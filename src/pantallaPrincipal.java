@@ -20,7 +20,6 @@ public class pantallaPrincipal extends JFrame {
 	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
-	private JButton btnInicio;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
 
@@ -34,20 +33,16 @@ public class pantallaPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		btnInicio = new JButton("INICIO");
-		btnInicio.setBounds(96, 11, 90, 55);
-		getContentPane().add(btnInicio);
-
 		btnEmpresas = new JButton("EMPRESAS");
-		btnEmpresas.setBounds(196, 11, 115, 55);
+		btnEmpresas.setBounds(167, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
-		btnAlumnos.setBounds(321, 11, 112, 55);
+		btnAlumnos.setBounds(368, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
 		btnNotas = new JButton("NOTAS");
-		btnNotas.setBounds(443, 11, 90, 55);
+		btnNotas.setBounds(571, 11, 90, 55);
 		getContentPane().add(btnNotas);
 		Icon foto = new ImageIcon(getClass().getResource("/img/fotoPerfil.png"));
 		btnPerfil = new JButton("");
@@ -62,6 +57,10 @@ public class pantallaPrincipal extends JFrame {
 		contentPane.add(lblUsuario_1);
 
 		JButton btnUsuario_1 = new JButton("");
+		btnUsuario_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnUsuario_1.setBounds(244, 106, 55, 55);
 		btnUsuario_1.setIcon(foto);
 		contentPane.add(btnUsuario_1);

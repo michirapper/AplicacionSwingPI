@@ -20,7 +20,6 @@ public class Empresa extends JFrame {
 	private JButton btnNotas;
 	private JButton btnAlumnos;
 	private JButton btnEmpresas;
-	private JButton btnInicio;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
 	private JLabel lblNewLabel;
@@ -34,10 +33,6 @@ public class Empresa extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		btnInicio = new JButton("INICIO");
-		btnInicio.setBounds(96, 11, 90, 55);
-		getContentPane().add(btnInicio);
 
 		btnEmpresas = new JButton("EMPRESAS");
 		btnEmpresas.setBounds(196, 11, 115, 55);
@@ -109,5 +104,9 @@ public class Empresa extends JFrame {
 		btnNewButton_1_1_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
 		btnNewButton_1_1_1.setBounds(732, 426, 90, 73);
 		contentPane.add(btnNewButton_1_1_1);
+		
+		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
+		btnAsegnarEmpresas.setBounds(543, 11, 182, 55);
+		contentPane.add(btnAsegnarEmpresas);
 	}
 }
