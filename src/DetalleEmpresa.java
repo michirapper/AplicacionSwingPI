@@ -38,7 +38,7 @@ public class DetalleEmpresa {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 897, 567);
+		frame.setBounds(100, 100, 983, 579);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -78,7 +78,7 @@ public class DetalleEmpresa {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(DetalleEmpresa.class.getResource("/img/Captura.PNG")));
-		lblNewLabel_1.setBounds(569, 124, 182, 185);
+		lblNewLabel_1.setBounds(524, 92, 413, 264);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");

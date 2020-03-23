@@ -61,5 +61,9 @@ public class Controlador {
 		miEmpresa.setVisible(true);
 				
 	}
+	public void goAlumnosEmpresa() {
+		miEmpresa.setVisible(false);
+		miPantallaPrincipal.setVisible(true);		
+	}
 	
 }

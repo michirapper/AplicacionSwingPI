@@ -50,7 +50,7 @@ public class DetallesAlumno extends JFrame{
 		contentPane.add(btnCerrarSesion);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/fotoPerfil.png")));
+		lblNewLabel.setIcon(new ImageIcon(DetallesAlumno.class.getResource("img/fotoPerfil.png")));
 		lblNewLabel.setBounds(96, 132, 90, 90);
 		contentPane.add(lblNewLabel);
 		

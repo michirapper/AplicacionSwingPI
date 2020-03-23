@@ -39,6 +39,11 @@ public class Empresa extends JFrame {
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAlumnos();
+			}
+		});
 		btnAlumnos.setBounds(321, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
@@ -65,45 +70,45 @@ public class Empresa extends JFrame {
 		lblNewLabel_1.setBounds(29, 297, 476, 229);
 		contentPane.add(lblNewLabel_1);
 		
-		JTextPane txtpnOracleCorporationEs = new JTextPane();
-		txtpnOracleCorporationEs.setText("Oracle Corporation \r\nCo-Founder & CTO\r\nOracle Corporation es una compa\u00F1\u00EDa especializada en el desarrollo de soluciones de nube y locales.\r\n\r\n");
-		txtpnOracleCorporationEs.setBounds(685, 77, 270, 104);
-		contentPane.add(txtpnOracleCorporationEs);
+		JTextPane txtOracleDescription = new JTextPane();
+		txtOracleDescription.setText("Oracle Corporation \r\nCo-Founder & CTO\r\nOracle Corporation es una compa\u00F1\u00EDa especializada en el desarrollo de soluciones de nube y locales.\r\n\r\n");
+		txtOracleDescription.setBounds(685, 77, 270, 104);
+		contentPane.add(txtOracleDescription);
 		
-		JTextPane txtpnDeloitteToucheCofounder = new JTextPane();
-		txtpnDeloitteToucheCofounder.setText("Deloitte Touche \r\nCo-Founder & CTO\r\nDeloitte Touche es la firma privada n\u00FAmero uno de servicios profesionales del mundo, por volumen de facturaci\u00F3n,  la m\u00E1s importante y prestigiosa del mundo y tambi\u00E9n una de las llamadas Cuatro Grandes Auditoras, junto a PricewaterhouseCoopers, Ernst & Young, y KPMG.\r\n");
-		txtpnDeloitteToucheCofounder.setBounds(519, 297, 337, 118);
-		contentPane.add(txtpnDeloitteToucheCofounder);
+		JTextPane txtDeloitteDescription = new JTextPane();
+		txtDeloitteDescription.setText("Deloitte Touche \r\nCo-Founder & CTO\r\nDeloitte Touche es la firma privada n\u00FAmero uno de servicios profesionales del mundo, por volumen de facturaci\u00F3n,  la m\u00E1s importante y prestigiosa del mundo y tambi\u00E9n una de las llamadas Cuatro Grandes Auditoras, junto a PricewaterhouseCoopers, Ernst & Young, y KPMG.\r\n");
+		txtDeloitteDescription.setBounds(519, 297, 337, 118);
+		contentPane.add(txtDeloitteDescription);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_Instagram_381384.png")));
-		btnNewButton.setBounds(685, 185, 90, 73);
-		contentPane.add(btnNewButton);
+		JButton btnInstOracle = new JButton("");
+		btnInstOracle.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_Instagram_381384.png")));
+		btnInstOracle.setBounds(685, 185, 90, 73);
+		contentPane.add(btnInstOracle);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_twitter_square_107066.png")));
-		btnNewButton_1.setBounds(783, 185, 90, 73);
-		contentPane.add(btnNewButton_1);
+		JButton btnTwtOracle = new JButton("");
+		btnTwtOracle.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_twitter_square_107066.png")));
+		btnTwtOracle.setBounds(783, 185, 90, 73);
+		contentPane.add(btnTwtOracle);
 		
-		JButton btnNewButton_1_1 = new JButton("");
-		btnNewButton_1_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
-		btnNewButton_1_1.setBounds(875, 185, 90, 73);
-		contentPane.add(btnNewButton_1_1);
+		JButton btnFbOracle = new JButton("");
+		btnFbOracle.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
+		btnFbOracle.setBounds(875, 185, 90, 73);
+		contentPane.add(btnFbOracle);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_Instagram_381384.png")));
-		btnNewButton_2.setBounds(515, 426, 90, 73);
-		contentPane.add(btnNewButton_2);
+		JButton btnInstDeloitte = new JButton("");
+		btnInstDeloitte.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_Instagram_381384.png")));
+		btnInstDeloitte.setBounds(515, 426, 90, 73);
+		contentPane.add(btnInstDeloitte);
 		
-		JButton btnNewButton_1_2 = new JButton("");
-		btnNewButton_1_2.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_twitter_square_107066.png")));
-		btnNewButton_1_2.setBounds(625, 426, 90, 73);
-		contentPane.add(btnNewButton_1_2);
+		JButton btnTwtDeloitte = new JButton("");
+		btnTwtDeloitte.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_twitter_square_107066.png")));
+		btnTwtDeloitte.setBounds(625, 426, 90, 73);
+		contentPane.add(btnTwtDeloitte);
 		
-		JButton btnNewButton_1_1_1 = new JButton("");
-		btnNewButton_1_1_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
-		btnNewButton_1_1_1.setBounds(732, 426, 90, 73);
-		contentPane.add(btnNewButton_1_1_1);
+		JButton btnFbDeloitte = new JButton("");
+		btnFbDeloitte.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
+		btnFbDeloitte.setBounds(732, 426, 90, 73);
+		contentPane.add(btnFbDeloitte);
 		
 		JButton btnAsegnarEmpresas = new JButton("ASIGNAR EMPRESAS");
 		btnAsegnarEmpresas.setBounds(543, 11, 182, 55);
@@ -112,6 +117,10 @@ public class Empresa extends JFrame {
 		JButton btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
 		btnAgregarEmpresa.setBounds(29, 11, 151, 55);
 		contentPane.add(btnAgregarEmpresa);
+	}
+	public void goAlumnos() {
+		miControlador.goAlumnosEmpresa();
+		
 	}
 	public void setControlador(Controlador miControlador) {
 		this.miControlador = miControlador;
