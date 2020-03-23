@@ -21,6 +21,7 @@ public class AjustesAlumno extends JFrame{
 	private JTextField textField;
 	
 	public AjustesAlumno() {
+		setTitle("Ajustes Alumnos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();

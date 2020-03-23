@@ -46,6 +46,11 @@ public class pantallaPrincipal extends JFrame {
 		getContentPane().add(btnAlumnos);
 		Icon foto = new ImageIcon(getClass().getResource("/img/fotoPerfil.png"));
 		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
 		btnPerfil.setIcon(foto);
 		btnPerfil.setBounds(900, 11, 55, 55);
 		getContentPane().add(btnPerfil);
@@ -59,7 +64,7 @@ public class pantallaPrincipal extends JFrame {
 		JButton btnUsuario_1 = new JButton("");
 		btnUsuario_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 			}
 		});
 		btnUsuario_1.setBounds(244, 106, 55, 55);
@@ -163,17 +168,22 @@ public class pantallaPrincipal extends JFrame {
 		contentPane.add(btnCerrarSesion);
 	}
 
+	public void goPerfil() {
+		miControlador.goPerfilPantallaPrincipal();
+	}
+
 	public void goEmpresas() {
 		miControlador.goEmpresasPantallaPrincipal();
-		
+
 	}
 
 	public void setControlador(Controlador miControlador) {
 		this.miControlador = miControlador;
 	}
+
 	public void gologin() {
 		miControlador.goLoginPantallaPrincipal();
 
 	}
-	
+
 }

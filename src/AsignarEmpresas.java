@@ -22,7 +22,7 @@ public class AsignarEmpresas extends JFrame {
 	private Icon iconoBoton;
 
 	public AsignarEmpresas() {
-		setTitle("Cambio contraseña");
+		setTitle("Asignar Empresa");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -45,7 +45,7 @@ public class AsignarEmpresas extends JFrame {
 				goAlumnos();
 			}
 		});
-		btnAlumnos.setBounds(386, 11, 112, 55);
+		btnAlumnos.setBounds(515, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
 		btnPerfil = new JButton("");

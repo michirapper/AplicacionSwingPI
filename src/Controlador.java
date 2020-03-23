@@ -8,12 +8,16 @@ public class Controlador {
 	private Empresa	miEmpresa;
 	private DetalleEmpresa miDetalleEmpresa;
 	private AsignarEmpresas miAsignarEmpresas;
+	private DetallesAlumno miDetallesAlumno;
 	
 	public void setpantallaPrincipal(pantallaPrincipal miPantallaPrincipal) {
 		this.miPantallaPrincipal = miPantallaPrincipal;
 	}
 	public void setAsignarEmpresas(AsignarEmpresas miAsignarEmpresas) {
 		this.miAsignarEmpresas = miAsignarEmpresas;
+	}
+	public void setDetallesAlumno(DetallesAlumno miDetallesAlumno) {
+		this.miDetallesAlumno = miDetallesAlumno;
 	}
 	public void setDetalleEmpresa(DetalleEmpresa miDetalleEmpresa) {
 		this.miDetalleEmpresa = miDetalleEmpresa;
@@ -98,6 +102,47 @@ public class Controlador {
 	}
 	public void goLoginAsignarEmpresa() {
 		miAsignarEmpresas.setVisible(false);
+		miLogin.setVisible(true);
+		
+	}
+	public void goPerfilPantallaPrincipal() {
+		miPantallaPrincipal.setVisible(false);
+		miDetallesAlumno.setVisible(true);
+		
+	}
+	public void goEmpresaDetallesAlumno() {
+		miDetallesAlumno.setVisible(false);
+		miEmpresa.setVisible(true);
+	}
+	public void goAlumnosDetallesAlumnos() {
+		miDetallesAlumno.setVisible(false);
+		miPantallaPrincipal.setVisible(true);		
+	}
+	public void goLoginDetallesAlumno() {
+		miDetallesAlumno.setVisible(false);
+		miLogin.setVisible(true);		
+	}
+	public void goPerfilEmpresa() {
+		miEmpresa.setVisible(false);
+		miDetallesAlumno.setVisible(true);
+		
+	}
+	public void goEmpresaDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
+		miEmpresa.setVisible(true);		
+	}
+	public void goAlumnosDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
+		miPantallaPrincipal.setVisible(true);
+		
+	}
+	public void goAsignarEmpresasDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
+		miAsignarEmpresas.setVisible(true);		
+		
+	}
+	public void goLoginDetalleEmpresa() {
+		miDetalleEmpresa.setVisible(false);
 		miLogin.setVisible(true);
 		
 	}

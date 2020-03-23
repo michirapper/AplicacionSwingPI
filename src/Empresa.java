@@ -29,7 +29,7 @@ public class Empresa extends JFrame {
 	private JButton btnCerrarSesion;
 
 	public Empresa() {
-		setTitle("Cambio contraseña");
+		setTitle("Empresa");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -51,6 +51,11 @@ public class Empresa extends JFrame {
 		getContentPane().add(btnAlumnos);
 
 		btnPerfil = new JButton("");
+		btnPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goPerfil();
+			}
+		});
 		btnPerfil.setIcon(new ImageIcon(getClass().getResource("/img/fotoPerfil.png")));
 		btnPerfil.setBounds(900, 11, 55, 55);
 		getContentPane().add(btnPerfil);
@@ -131,6 +136,10 @@ public class Empresa extends JFrame {
 		btnAgregarEmpresa = new JButton("AGREGAR EMPRESA");
 		btnAgregarEmpresa.setBounds(91, 11, 151, 55);
 		contentPane.add(btnAgregarEmpresa);
+	}
+	public void goPerfil() {
+		miControlador.goPerfilEmpresa();
+		
 	}
 	public void goAsignarEmpresas() {
 		miControlador.goAsignarEmpresaEmpresa();

@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class DetallesAlumno extends JFrame{
 	private Controlador miControlador;
@@ -20,6 +22,7 @@ public class DetallesAlumno extends JFrame{
 	private JTextField textField;
 	
 	public DetallesAlumno() {
+		setTitle("Detalle Alumno");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 981, 565);
 		contentPane = new JPanel();
@@ -28,10 +31,20 @@ public class DetallesAlumno extends JFrame{
 		contentPane.setLayout(null);
 
 		btnEmpresas = new JButton("EMPRESAS");
+		btnEmpresas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goEmpresas();
+			}
+		});
 		btnEmpresas.setBounds(218, 11, 115, 55);
 		getContentPane().add(btnEmpresas);
 
 		btnAlumnos = new JButton("ALUMNOS");
+		btnAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goAlumnos();
+			}
+		});
 		btnAlumnos.setBounds(535, 11, 112, 55);
 		getContentPane().add(btnAlumnos);
 
@@ -41,6 +54,11 @@ public class DetallesAlumno extends JFrame{
 		getContentPane().add(btnPerfil);
 		
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				goLogin();
+			}
+		});
 		btnCerrarSesion.setBounds(775, 11, 115, 23);
 		contentPane.add(btnCerrarSesion);
 		
@@ -80,5 +98,19 @@ public class DetallesAlumno extends JFrame{
 		button_1.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/iconfinder_icon-arrow-right-c_211621.png")));
 		button_1.setBounds(195, 353, 138, 37);
 		contentPane.add(button_1);
+	}
+	public void goLogin() {
+		miControlador.goLoginDetallesAlumno();
+		
+	}
+	public void goAlumnos() {
+		miControlador.goAlumnosDetallesAlumnos();
+	}
+	public void goEmpresas() {
+		miControlador.goEmpresaDetallesAlumno();
+		
+	}
+	public void setControlador(Controlador miControlador) {
+		this.miControlador = miControlador;
 	}
 }
