@@ -65,9 +65,9 @@ public class Empresa extends JFrame {
 		lblNewLabel.setBounds(29, 77, 646, 209);
 		contentPane.add(lblNewLabel);
 		
-		lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/Deloitte.jpg")));
-		lblNewLabel_1.setBounds(29, 297, 744, 229);
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/deloitte.png")));
+		lblNewLabel_1.setBounds(29, 297, 476, 229);
 		contentPane.add(lblNewLabel_1);
 		
 		JTextPane txtpnOracleCorporationEs = new JTextPane();
@@ -77,7 +77,7 @@ public class Empresa extends JFrame {
 		
 		JTextPane txtpnDeloitteToucheCofounder = new JTextPane();
 		txtpnDeloitteToucheCofounder.setText("Deloitte Touche \r\nCo-Founder & CTO\r\nDeloitte Touche es la firma privada n\u00FAmero uno de servicios profesionales del mundo, por volumen de facturaci\u00F3n,  la m\u00E1s importante y prestigiosa del mundo y tambi\u00E9n una de las llamadas Cuatro Grandes Auditoras, junto a PricewaterhouseCoopers, Ernst & Young, y KPMG.\r\n");
-		txtpnDeloitteToucheCofounder.setBounds(783, 297, 172, 174);
+		txtpnDeloitteToucheCofounder.setBounds(519, 297, 337, 118);
 		contentPane.add(txtpnDeloitteToucheCofounder);
 		
 		JButton btnNewButton = new JButton("");
@@ -94,5 +94,20 @@ public class Empresa extends JFrame {
 		btnNewButton_1_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
 		btnNewButton_1_1.setBounds(875, 185, 90, 73);
 		contentPane.add(btnNewButton_1_1);
+		
+		JButton btnNewButton_2 = new JButton("");
+		btnNewButton_2.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_Instagram_381384.png")));
+		btnNewButton_2.setBounds(515, 426, 90, 73);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_1_2 = new JButton("");
+		btnNewButton_1_2.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_twitter_square_107066.png")));
+		btnNewButton_1_2.setBounds(625, 426, 90, 73);
+		contentPane.add(btnNewButton_1_2);
+		
+		JButton btnNewButton_1_1_1 = new JButton("");
+		btnNewButton_1_1_1.setIcon(new ImageIcon(Empresa.class.getResource("/img/iconfinder_square-facebook_317727.png")));
+		btnNewButton_1_1_1.setBounds(732, 426, 90, 73);
+		contentPane.add(btnNewButton_1_1_1);
 	}
 }
