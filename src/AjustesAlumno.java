@@ -20,7 +20,7 @@ public class AjustesAlumno extends JFrame{
 	private JButton btnEmpresas;
 	private ImageIcon imagenBoton;
 	private Icon iconoBoton;
-	private JTextField textField;
+	private JTextField txtCv;
 	
 	public AjustesAlumno() {
 		setTitle("Ajustes Alumnos");
@@ -82,10 +82,11 @@ public class AjustesAlumno extends JFrame{
 		lblNewLabel_1.setBounds(117, 246, 46, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setBounds(196, 200, 137, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtCv = new JTextField();
+		txtCv.setText("CV");
+		txtCv.setBounds(196, 200, 137, 20);
+		contentPane.add(txtCv);
+		txtCv.setColumns(10);
 		
 		JButton button = new JButton("");
 		button.setIcon(new ImageIcon(DetallesAlumno.class.getResource("/img/380020.png")));
